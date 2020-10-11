@@ -13,7 +13,7 @@ namespace KartaskaIgra
                 {
                     Console.Write("Unesite vrijednost karte: ");
                     float nova_karta = Convert.ToInt32(Console.ReadLine());
-                    brojac += nova_karta;
+                    brojac += nova_karta <= 13 ? nova_karta : throw new System.ArgumentException("Broj ne može biti veci od 13!", "nova_karta");
                 }
                 catch
                 {
